@@ -31,7 +31,7 @@ include mysql
 include postgresql
 include sqlite
 include laravel
-
+include composer
 
 # Setup
 ## Apache
@@ -101,3 +101,11 @@ define sqlite::db(
         refreshonly => true,
       }
   }
+
+## Composer
+class { "composer":
+  target_dir      => '/usr/local/bin',
+  composer_file   => 'composer',
+  download_method => 'curl', # download methods are curl or wget
+  logoutput       => true
+}
