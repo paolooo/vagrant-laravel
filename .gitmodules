@@ -1,3 +1,12 @@
 [submodule "puppet"]
 	path = puppet
 	url = https://github.com/paolooo/puppet.git
+[submodule "extras/modules/laravel"]
+	path = extras/modules/laravel
+	url = https://github.com/paolooo/puppet-laravel.git
+[submodule "extras/modules/augeas"]
+	path = extras/modules/augeas
+	url = git://github.com/camptocamp/puppet-augeas.git
+[submodule "extras/modules/composer"]
+	path = extras/modules/composer
+	url = git://github.com/dazz/puppet-composer.git

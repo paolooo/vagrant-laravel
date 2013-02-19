@@ -41,6 +41,3 @@ Vagrant Commands
 * `vagrant destroy`
 * `vagrant ssh`
 * `vagrant status`
-
-
-
