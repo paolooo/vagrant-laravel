@@ -41,3 +41,10 @@ Vagrant Commands
 * `vagrant destroy`
 * `vagrant ssh`
 * `vagrant status`
+
+
+Thanks to
+---------
+* [Puppet Labs](https://github.com/puppetlabs/)
+* [Alessandro Franceschi](https://github.com/example42)
+* [Anne-Julia Scheuermann](https://github.com/dazz)

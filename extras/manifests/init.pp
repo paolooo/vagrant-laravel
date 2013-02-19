@@ -19,7 +19,7 @@ if $password == '' { $password = '123' }
 if $host == '' { $host = 'localhost' }
 
 # Other Packages
-package { ['vim','curl','phpunit','php5-sqlite','unzip']:
+package { ['vim','curl','phpunit','php5-cli','php5-sqlite','unzip']:
   ensure  => 'installed'
 }
 
@@ -48,6 +48,10 @@ a2mod { 'rewrite': ensure => present }
 
 
 ## PHP
+class { 'php':
+  version => '5.4.11'
+}
+
 php::module { ['xdebug', 'mysql', 'curl', 'gd']:
   notify  => [ Service['httpd'], ],
 }
@@ -101,11 +105,3 @@ define sqlite::db(
         refreshonly => true,
       }
   }
-
-## Composer
-class { "composer":
-  target_dir      => '/usr/local/bin',
-  composer_file   => 'composer',
-  download_method => 'curl', # download methods are curl or wget
-  logoutput       => true
-}
