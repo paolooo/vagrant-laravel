@@ -35,7 +35,6 @@ package { ['php5-mysql','php5-sqlite']:
   require => Exec['apt-get update'],
 }
 
-
 include pear
 include mysql
 ##include postgresql
@@ -69,6 +68,8 @@ class { "ruby":
 
 ## Nodejs
 class { "nodejs": }
+
+## PHP MODULES
 php::module { ['curl', 'gd']:
   notify  => [ Service['httpd'], ],
 }
@@ -121,4 +122,3 @@ define sqlite::db(
         refreshonly => true,
       }
   }
-
