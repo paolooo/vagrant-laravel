@@ -1,6 +1,5 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
 Vagrant::Config.run do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
@@ -57,7 +56,7 @@ Vagrant::Config.run do |config|
   #
   config.vm.provision :puppet do |puppet|
     puppet.facter = {
-      "fqdn"      => "dev.lamp.mysql",
+      "fqdn"      => "dev.laravel.mysql",
       "hostname"  => "www",
       "docroot"   => "/vagrant/www",
       "host"      => 'localhost',
@@ -69,6 +68,7 @@ Vagrant::Config.run do |config|
     puppet.manifests_path = "extras/manifests"
     puppet.module_path = ["puppet/modules", "extras/modules"]
     puppet.manifest_file  = "init.pp"
+    #puppet.options = ["--verbose --debug"]
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
