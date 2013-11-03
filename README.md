@@ -1,5 +1,5 @@
-Vagrant LAMP
-============
+Vagrant LARAVEL
+===============
 by Nino Paolo Amarillento
 
 
